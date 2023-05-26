@@ -9,7 +9,7 @@ const Card = ({ name, price, imgUrl }) => {
         <div className="flex flex-col space-y-4">
           <img
             src={imgUrl}
-            alt="mobile"
+            alt={name}
             className="w-full h-[300px] object-contain"
           />
           <div className="flex justify-between py-3 text-xl font-semibold">
@@ -17,7 +17,7 @@ const Card = ({ name, price, imgUrl }) => {
             <p>₹{price}</p>
           </div>
           <button
-            onClick={() => addToCart(name, price)}
+            onClick={() => addToCart(name, price, imgUrl)}
             className="bg-orange-400 hover:bg-gradient-to-r from-orange-400 to-red-400 py-1 text-white font-bold text-2xl rounded-md"
           >
             Buy Now
